@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap')
+// Layout
+$breakpoint-mobile: 375px
+$breakpoint-desktop: 1440px
+
+// Colors
+$bright-orange: hsl(31, 77%, 52%)
+$dark-cyan: hsl(184, 100%, 22%)
+$very-dark-cyan: hsl(179, 100%, 13%)
+$white: hsl(0, 0%, 100%)
+$transparent-white: hsla(0, 0%, 100%, 0.75)
+$very-light-gray: hsl(0, 0%, 95%)
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 10px
+.card
+    margin: 5% 0
+    max-width: 920px
+    width: 90%
+    display: flex
+    flex-direction: column
+    border-radius: 8px
+    overflow: hidden
+    &__section
+        padding: 2.5rem
+        &--sedans
+            background-color: $bright-orange 
+        &--suvs
+            background-color: $dark-cyan
+        &--luxury
+            background-color: $very-dark-cyan
+    &__title
+        font-family: 'Big Shoulders Display', cursive
+        font-size: 4rem
+        line-height: 4.8rem
+        text-transform: uppercase
+        color: $white 
+        margin: 35px 0 25px 0
+    &__description
+        font-size: 15px
+        line-height: 25px
+        font-family: 'Lexend Deca', sans-serif
+        color: $white
+        margin-bottom: 2.5rem
+        opacity: 0.75
+        font-weight: 300
+    &__button
+        background: $very-light-gray
+        border-radius: 25px
+        border: 2px solid $white
+        padding: 11px 31px
+        font-family: 'Lexend Deca', sans-serif
+        cursor: pointer
+        font-size: 15px
+        &--sedans
+            color: $bright-orange
+        &--suvs
+            color: $dark-cyan
+        &--luxury
+            color: $very-dark-cyan
+    &__button:hover
+        background-color: hsla(0, 0%, 100%, 0.0)
+        color: $white
+        border: 2px solid $white
+
+@media (min-width: 768px)
+    body
+        height: 100vh
+    .card
+        flex-direction: row
+        &__description
+            margin-bottom: 83px
+        &__section
+            padding: 48px
